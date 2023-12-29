@@ -4,8 +4,9 @@ const server = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const dataRouters = require("./routes/data");
+const path = require("path");
 
-// server.use(express.static(path.resolve(__dirname, "build")));
+server.use(express.static(path.resolve(__dirname, "build")));
 server.use(cors());
 server.use(express.json());
 
